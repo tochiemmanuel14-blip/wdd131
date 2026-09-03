@@ -1,0 +1,26 @@
+/* 1. Google Font applied */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 2. Structural rules for header, main, footer - Audit requires this */
+header,
+main,
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* 3. Course title styling */
+#course-title {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: #2c5f8a;
+    /* Darker steelblue for contrast */
+    color: white;
+    padding:

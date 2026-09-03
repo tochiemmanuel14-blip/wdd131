@@ -3,6 +3,8 @@
     --secondary-color: #219ebc;
     --accent1-color: #333333;
     --accent2-color: #ffffff;
+    --light-color: #e8f4f8;
+    --card-color: #f4f4f4;
     --heading-font: Arial, sans-serif;
     --body-font: Verdana, sans-serif;
 }
@@ -16,6 +18,8 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    background-color: var(--accent2-color);
+    line-height: 1.6;
 }
 
 header,
@@ -40,11 +44,21 @@ header img {
     margin: 10px;
 }
 
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 nav a {
     text-decoration: none;
     color: #000000;
     font-weight: bold;
     padding: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 main {
@@ -55,34 +69,36 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px;
     background-color: var(--primary-color);
     color: var(--accent2-color);
 }
 
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
 h1,
-h2 {
+h2,
+h3 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
+p {
+    margin: 16px 0;
+    padding: 0;
 }
 
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-/* Hero Section */
+/* =========================
+   HOME PAGE - HERO
+   ========================= */
 
 .hero {
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 .hero img {
@@ -93,30 +109,141 @@ nav {
 
 .hero h1 {
     position: absolute;
-    top: 20px;
+    top: 25px;
+    left: 0;
     width: 100%;
-    padding: 16px;
+    padding: 18px;
+    margin: 0;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
+    background-color: rgba(51, 51, 51, 0.85);
     color: var(--accent2-color);
 }
 
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+/* =========================
+   HOME PAGE - NEWSLETTER
+   ========================= */
+
+.newsletter {
+    background-color: var(--light-color);
+    text-align: center;
+    padding: 30px;
+    margin: 0;
 }
 
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 15px;
+.newsletter h2 {
+    margin-bottom: 10px;
 }
 
-/* History Section */
+.newsletter p {
+    margin: 10px auto 20px;
+    max-width: 650px;
+}
+
+.newsletter form {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    max-width: 650px;
+    margin: 20px auto 0;
+}
+
+.newsletter label {
+    text-align: right;
+    font-weight: bold;
+}
+
+.newsletter input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--accent1-color);
+    border-radius: 3px;
+}
+
+/* =========================
+   BUTTONS / CALL TO ACTION
+   ========================= */
+
+.button,
+.newsletter button,
+.contact-form button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    border: none;
+    padding: 12px 22px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button:hover,
+.newsletter button:hover,
+.contact-form button:hover {
+    background-color: #083b50;
+}
+
+/* =========================
+   HOME PAGE - CTA
+   ========================= */
+
+.cta,
+.trips-intro {
+    text-align: center;
+    padding: 35px 30px;
+    margin: 0;
+}
+
+.cta h2,
+.trips-intro h1 {
+    margin-bottom: 10px;
+}
+
+.cta p,
+.trips-intro p {
+    max-width: 650px;
+    margin: 10px auto 20px;
+}
+
+/* =========================
+   HOME PAGE - CSS GRID
+   ========================= */
+
+.grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 30px;
+    margin: 0;
+}
+
+.grid-content article {
+    margin: 0;
+    padding: 20px;
+    background-color: var(--card-color);
+    text-align: center;
+    border-radius: 4px;
+}
+
+.grid-content article h2 {
+    margin: 15px 0 10px;
+}
+
+.grid-content article p {
+    margin: 10px 0;
+}
+
+.grid-content img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* =========================
+   ABOUT PAGE - HISTORY
+   ========================= */
 
 .history {
     display: grid;
@@ -124,6 +251,7 @@ nav {
     align-items: center;
     gap: 20px;
     margin: 30px 0;
+    padding: 10px;
 }
 
 .history h2 {
@@ -137,13 +265,16 @@ nav {
     height: auto;
 }
 
-/* Adventure Section */
+/* =========================
+   ABOUT PAGE - ADVENTURES
+   ========================= */
 
 .adventures {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     margin: 30px 0;
+    padding: 10px;
 }
 
 .adventures h2 {
@@ -168,23 +299,79 @@ nav {
     font-weight: bold;
 }
 
-/* Footer Social Media */
+/* =========================
+   TRIPS PAGE
+   ========================= */
 
-.socialmedia {
-    display: flex;
-    gap: 15px;
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px;
+    margin: 0;
 }
 
-.socialmedia a {
-    text-decoration: none;
+.trip-card {
+    background-color: var(--card-color);
+    padding: 20px;
+    margin: 0;
+    border-radius: 4px;
 }
 
-.socialmedia img {
-    width: 40px;
-    height: 40px;
+.trip-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
-/* Contact Page */
+.trip-card h2 {
+    margin: 15px 0 10px;
+}
+
+.trip-card p {
+    margin: 0;
+}
+
+/* =========================
+   TRIPS PAGE - TABLE
+   ========================= */
+
+.trip-table {
+    padding: 30px;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.trip-table h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.trip-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.trip-table th,
+.trip-table td {
+    border: 1px solid var(--accent1-color);
+    padding: 12px;
+    text-align: left;
+}
+
+.trip-table th {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+}
+
+.trip-table tr:nth-child(even) {
+    background-color: var(--light-color);
+}
+
+/* =========================
+   CONTACT PAGE
+   ========================= */
 
 .contact-info,
 .map,
@@ -193,6 +380,12 @@ nav {
     margin: 2rem auto;
     max-width: 900px;
     padding: 1rem;
+}
+
+.contact-info iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
 }
 
 .map iframe {
@@ -230,5 +423,85 @@ nav {
 
 .contact-form button {
     padding: 0.75rem;
-    cursor: pointer;
+}
+
+/* =========================
+   FOOTER SOCIAL MEDIA
+   ========================= */
+
+.socialmedia {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    padding: 0;
+}
+
+.socialmedia img {
+    width: 40px;
+    height: 40px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header,
+    main,
+    footer {
+        width: 100%;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    header img {
+        margin-bottom: 5px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .newsletter form {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter label {
+        text-align: left;
+    }
+
+    .grid-content,
+    .trip-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .history {
+        grid-template-columns: 1fr;
+    }
+
+    .history h2 {
+        grid-column: 1;
+    }
+
+    .adventures {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .adventures h2 {
+        grid-column: 1 / 3;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
 }

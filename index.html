@@ -1,52 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chimezie Emmanuel | WDD 130</title>
-
+    <title>WDD 131: Dynamic Web Fundamentals - Chimezie Emmanuel</title>
     <meta name="description"
-      content="Chimezie Emmanuel WDD 130 home page showcasing web development assignments and projects.">
+      content="Chimezie Emmanuel WDD 131 home page showcasing web development assignments and projects.">
     <meta name="author" content="Chimezie Emmanuel">
 
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
     <header>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
         <nav>
             <a href="#">Home</a>
             <a href="wwr/">Rafting Website</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Scripture</a>
+            <a href="#">Final Project</a>
         </nav>
     </header>
 
     <main>
-        <h1>Chimezie Emmanuel | WDD 130</h1>
+        <h1>Chimezie Emmanuel</h1>
 
-        <img src="images/profile.jpg" alt="Hello, my name is Chimezie Emmanuel">
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/profile.webp" alt="Hello, my name is Chimezie Emmanuel">
+            <p>My name is Chimezie and I am from Nigeria. I enjoy learning web development.</p>
+        </section>
 
-        <p>
-            Hello! My name is Chimezie Emmanuel, and I am from Nigeria. I am studying Software
-            Development through BYU-Pathway Worldwide. I enjoy learning programming, creating
-            content, and improving my web development skills. I am excited to continue learning
-            HTML, CSS, and JavaScript.
-        </p>
+        <section class="card">
+            <h2>My Country</h2>
+            <img src="images/salt-lake-temple.jpg" alt="Beautiful scenery in Nigeria">
+            <p>Nigeria is a beautiful country with diverse cultures and people.</p>
+        </section>
     </main>
 
-    <aside>
-        <h2>Nigeria</h2>
-        <img src="images/nigeria.jpg" alt="Beautiful scenery in Nigeria">
-
-        <p>
-            Nigeria is the most populous country in Africa. It is known for its rich cultural
-            diversity, beautiful landscapes, delicious foods, and vibrant economy. Nigeria is
-            often called the "Giant of Africa."
-        </p>
-    </aside>
-
     <footer>
-        <p>&copy;2026 🌴 Chimezie Emmanuel 🌴 Nigeria</p>
+        <p>&copy;<span id="currentyear"></span> Chimezie Emmanuel, Nigeria</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 
