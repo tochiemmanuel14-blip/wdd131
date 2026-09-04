@@ -3,6 +3,8 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     line-height: 1.6;
+    background-color: #ffffff;
+    color: #000;
 }
 
 /* 2. Structural rules for header, main, footer - Audit requires this */
@@ -21,6 +23,66 @@ footer {
     font-size: 1.5rem;
     font-weight: 700;
     background-color: #2c5f8a;
-    /* Darker steelblue for contrast */
+    /* Darker steelblue for contrast AA */
     color: white;
-    padding:
+    padding: 1rem;
+}
+
+/* 4. Flexbox for nav - Audit requires display:flex */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2c5f8a;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+}
+
+/* 5. Hover effect - Audit requires :hover */
+nav a:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* 6. Grid for main - Audit requires display:grid */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    padding-top: 2rem;
+}
+
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #2c5f8a;
+    /* darker for contrast */
+}
+
+section.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+}
+
+section.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #2c5f8a;
+    color: white;
+}
