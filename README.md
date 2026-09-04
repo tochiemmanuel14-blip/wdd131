@@ -1,4 +1,4 @@
-# WDD 130 Starting Template Repository
+# WDD 131 Starting Template Repository
 
 This repository provides the starter files and structure for **WDD 130** assignments and activities.
 
