@@ -1,7 +1,11 @@
-// Get current year for footer
-const currentYear = new Date().getFullYear();
-document.getElementById("currentyear").textContent = currentYear;
+// Populate the current year in the footer span
+const currentYearSpan = document.querySelector("#currentyear");
+if (currentYearSpan) {
+    currentYearSpan.textContent = new Date().getFullYear();
+}
 
-// Get last modified date for footer
-const lastModified = document.lastModified;
-document.getElementById("lastModified").textContent = `Last Modification: ${lastModified}`;
+// Populate the last modified date in the footer paragraph
+const lastModifiedParagraph = document.querySelector("#lastModified");
+if (lastModifiedParagraph) {
+    lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
+}
