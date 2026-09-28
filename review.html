@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <meta name="description" content="Confirmation page">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>Review Submitted</h1>
+    </header>
+    <main style="text-align:center;">
+        <h2>Thank you!</h2>
+        <p>Your review has been recorded.</p>
+        <p>Number of reviews completed: <strong id="counter">0</strong></p>
+        <a href="form.html">Submit Another</a>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> - chimezie Emmanuel</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        let total = Number(localStorage.getItem("reviews")) || 0;
+        total++;
+        localStorage.setItem("reviews", total);
+        document.getElementById("counter").textContent = total;
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+
+</html>
