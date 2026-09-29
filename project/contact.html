@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lagos Style Hub - Contact</title>
+    <meta name="description" content="Contact Lagos Style Hub for orders and inquiries">
+    <meta name="author" content="Chimezie Emmanuel">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Lagos Style Hub</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Contact Us</h2>
+        <form method="get" action="contact.html" id="contactForm">
+            <label for="fullname">Full Name*</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="category">Interest</label>
+            <select id="category" name="category" required>
+                <option value="" disabled selected>Select a category...</option>
+                <option value="men">Men Wear</option>
+                <option value="women">Women Wear</option>
+                <option value="custom">Custom Order</option>
+            </select>
+
+            <fieldset>
+                <legend>Preferred Contact</legend>
+                <label><input type="radio" name="contactMethod" value="email" required>
+                    Email</label>
+                <label><input type="radio" name="contactMethod" value="whatsapp" required>
+                    WhatsApp</label>
+            </fieldset>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+
+            <label><input type="checkbox" id="newsletter" name="newsletter" value="yes"> Subscribe
+                to trends</label>
+
+            <input type="submit" value="Send Message">
+        </form>
+        <div id="formMessage"></div>
+    </main>
+    <footer>
+        <p>&copy; 2026 | Chimezie Emmanuel | Lagos, Nigeria</p>
+        <a href="references.html">References</a>
+    </footer>
+</body>
+
+</html>
