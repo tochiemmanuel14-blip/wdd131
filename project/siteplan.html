@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lagos Fresh Market - Site Plan</title>
+    <meta name="description"
+      content="W05 Website Planning Document for Lagos Fresh Market final project">
+    <meta name="author" content="chimezie Emmanuel">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1A5D1A;
+            --secondary: #FFB534;
+            --accent: #FEFAE0;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            background-color: var(--accent);
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        .logo {
+            background: white;
+            color: var(--primary);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 10px;
+            border: 3px solid var(--secondary);
+        }
+
+        h2 {
+            background-color: var(--secondary);
+            color: #222;
+            padding: 10px 15px;
+            border-left: 6px solid var(--primary);
+            border-radius: 4px;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .color-box {
+            display: inline-block;
+            width: 120px;
+            height: 50px;
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .c1 {
+            background-color: #1A5D1A;
+        }
+
+        .c2 {
+            background-color: #FFB534;
+            color: #333;
+        }
+
+        .wireframe {
+            border: 2px dashed var(--primary);
+            padding: 15px;
+            background: #f9f9f9;
+            margin: 10px 0;
+        }
+
+        .wf-item {
+            border: 1px solid #999;
+            background: white;
+            padding: 10px;
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">LFM 🌿</div>
+        <h1>Lagos Fresh Market - Site Plan</h1>
+        <p>W05 Project Planning Document</p>
+    </header>
+
+    <section>
+        <h2>Site Name</h2>
+        <h3>Lagos Fresh Market</h3>
+        <div class="logo">LFM Logo - Fresh Leaf</div>
+        <p><strong>Domain:</strong> lagosfreshmarket.org</p>
+        <p>I chose Lagos Fresh Market because it is specific to Lagos, easy to remember, and clearly
+            communicates freshness and local market focus. The name builds trust with local shoppers
+            and is perfect for branding and visibility.</p>
+    </section>
+
+    <section>
+        <h2>Site Purpose</h2>
+        <p>The site provides a hub for fresh farm produce in Lagos by providing product listings
+            with prices, vendor information, seasonal availability, and a direct order/contact form.
+            Services include browsing vegetables, fruits, and grains, saving favorites to a shopping
+            list using localStorage, and contacting vendors for delivery.</p>
+    </section>
+
+    <section>
+        <h2>Scenarios</h2>
+        <ul>
+            <li>What is the current price of tomatoes, pepper, and onions at Mile 12 market and can
+                I save them to my shopping list for tomorrow?</li>
+            <li>Where can I find a trusted vendor near Yaba who delivers fresh fruits and how do I
+                place an order online?</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Color Schema</h2>
+        <p><strong>Primary #1A5D1A (Deep Green):</strong> Used for header, footer, h1, h3, and
+            primary buttons. Represents freshness, farm, nature.</p>
+        <p><strong>Secondary #FFB534 (Golden Yellow):</strong> Used for h2 backgrounds,
+            call-to-action, accents, logo border. Represents Lagos energy and harvest.</p>
+        <div>
+            <span class="color-box c1">#1A5D1A</span>
+            <span class="color-box c2">#FFB534</span>
+        </div>
+        <p>This document uses both colors - header/footer use Primary, h2 uses Secondary as
+            required.</p>
+    </section>
+
+    <section>
+        <h2>Typography</h2>
+        <p><strong>Montserrat (700):</strong> Used for all headings h1, h2, h3 and logo for strong,
+            modern branding.</p>
+        <p><strong>Open Sans (400):</strong> Used for body paragraphs, lists, and all general
+            content for excellent readability on mobile.</p>
+        <p>This document uses Montserrat for headings and Open Sans for body as shown.</p>
+    </section>
+
+    <section>
+        <h2>Wireframes</h2>
+        <h3>Mobile View - 320px</h3>
+        <div class="wireframe">
+            <div class="wf-item">HEADER: Logo + Hamburger Menu</div>
+            <div class="wf-item">HERO: Image with lazy loading + Welcome Message</div>
+            <div class="wf-item">FEATURED PRODUCTS: 1 Column Stacked Cards</div>
+            <div class="wf-item">ABOUT LAGOS MARKET</div>
+            <div class="wf-item">BUTTON: View All Products</div>
+            <div class="wf-item">FOOTER</div>
+        </div>
+        <h3>Desktop View - 1024px</h3>
+        <div class="wireframe">
+            <div class="wf-item">HEADER: Logo | Nav: Home | Products | Contact</div>
+            <div class="wf-item" style="display:flex; gap:5px; border:none; padding:0;">
+                <span class="wf-item" style="flex:2;">HERO: Text Left + Image Right (lazy)</span>
+                <span class="wf-item" style="flex:1;">QUICK FORM</span>
+            </div>
+            <div class="wf-item">FEATURED: 3 Column Grid of Products</div>
+            <div class="wf-item">FOOTER: 3 Columns - Contact, Links, Social</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Lagos Fresh Market | chimezie Emmanuel | WDD 131</p>
+    </footer>
+</body>
+
+</html>
